@@ -1,0 +1,6 @@
+{
+  "name": "CropIQ",
+  "description": "A landing page for CropIQ, an AI-powered agricultural platform helping smallholder farmers detect plant diseases and nutrient deficiencies in real time. It provides instant diagnoses and localized remedies through SMS and USSD, bridging the digital divide and promoting climate-smart agriculture in Africa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
