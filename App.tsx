@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FeatureCard from './components/FeatureCard';
-import { LeafIcon, SmsIcon, MicroscopeIcon, GlobeIcon, UsersIcon, ShieldCheckIcon, CheckCircleIcon, BellIcon, ChartIcon, PartnershipIcon } from './components/Icons';
+import { LeafIcon, MicroscopeIcon, GlobeIcon, UsersIcon, ShieldCheckIcon, CheckCircleIcon, BellIcon, ChartIcon, PartnershipIcon } from './components/Icons';
 import GreenQuestLogo from './components/GreenQuestLogo';
 import StatItem from './components/StatItem';
 import InteractiveDemo from './components/InteractiveDemo';
+import { Camera } from 'lucide-react';
 
 const App: React.FC = () => {
     const [page, setPage] = useState('home');
@@ -104,7 +105,7 @@ const App: React.FC = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                                 <StatItem value="$1.2B" label="Market Opportunity" description="Agri-advisory and extension market" />
                                 <StatItem value="50M+" label="Farmers" description="Smallholders in Sub-Saharan Africa" />
-                                <StatItem value="~80%" label="Mobile Penetration" description="Rapidly growing across the continent" />
+                                <StatItem value="95%+" label="Diagnostic Accuracy" description="High-precision identification of crop pathogens" />
                                 <StatItem value="20,000" label="Projected Users" description="Goal for current scaling phase" />
                             </div>
                         </div>
@@ -126,11 +127,11 @@ const App: React.FC = () => {
                                 
                                 <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col items-center text-center relative z-10 h-full">
                                     <div className="w-20 h-20 bg-brand-green-100 rounded-full flex items-center justify-center mb-6">
-                                        <SmsIcon className="h-10 w-10 text-brand-green-600" />
+                                        <Camera className="h-10 w-10 text-brand-green-600" />
                                     </div>
-                                    <h3 className="text-2xl font-bold text-brand-charcoal mb-4">1. Send a Photo</h3>
+                                    <h3 className="text-2xl font-bold text-brand-charcoal mb-4">1. Upload Leaf Photo</h3>
                                     <p className="text-gray-600 leading-relaxed">
-                                        Farmers send a picture of their crop or describe symptoms via App or SMS. Our system handles low-resource environments.
+                                        Upload a picture of your affected crop directly to our secure, intuitive web application platform.
                                     </p>
                                 </div>
 
@@ -150,7 +151,7 @@ const App: React.FC = () => {
                                     </div>
                                     <h3 className="text-2xl font-bold text-brand-charcoal mb-4">3. Get a Solution</h3>
                                     <p className="text-gray-600 leading-relaxed">
-                                        Instant diagnosis and localized organic remedies are sent back in the farmer's preferred language (Yoruba, Hausa, Igbo, English).
+                                        Instant diagnosis and localized organic remedies are displayed on your dashboard in your preferred language.
                                     </p>
                                 </div>
                             </div>
@@ -215,8 +216,8 @@ const App: React.FC = () => {
                                                 <CheckCircleIcon className="h-5 w-5" />
                                             </div>
                                             <div>
-                                                <h4 className="font-bold text-brand-charcoal text-xl mb-1">Low-resource accessibility</h4>
-                                                <p className="text-gray-600 italic">SMS and USSD integration means any farmer with a basic phone can access life-saving tech.</p>
+                                                <h4 className="font-bold text-brand-charcoal text-xl mb-1">Interactive Diagnostic Dashboard</h4>
+                                                <p className="text-gray-600 italic">Visualize disease spread and track plant health trends directly through our web application.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -239,20 +240,13 @@ const App: React.FC = () => {
                                 <div className="lg:col-span-2 grid gap-6">
                                     {/* Highlight Card: UNDP Grant */}
                                     <div className="group relative overflow-hidden bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-8 md:p-10 transition-all duration-500 hover:bg-white/10 hover:border-brand-green-500/30">
-                                        <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-8">
-                                            <div className="flex-shrink-0">
-                                                <div className="text-5xl md:text-7xl font-black text-brand-green-500 [text-shadow:0_0_30px_rgba(141,198,63,0.3)]">
-                                                    $30K
-                                                </div>
+                                        <div className="relative z-10 flex flex-col sm:flex-row items-start gap-6">
+                                            <div className="flex-shrink-0 bg-brand-green-500 p-4 rounded-2xl shadow-[0_0_20px_rgba(141,198,63,0.4)]">
+                                                <ShieldCheckIcon className="w-8 h-8 text-brand-charcoal" />
                                             </div>
                                             <div>
-                                                <div className="flex items-center gap-3 mb-3">
-                                                    <div className="bg-brand-green-500/20 text-brand-green-500 p-2 rounded-lg">
-                                                        <ShieldCheckIcon className="w-5 h-5" />
-                                                    </div>
-                                                    <h4 className="font-bold text-xl md:text-2xl text-white">UNDP Grant Awarded</h4>
-                                                </div>
-                                                <p className="text-gray-400 text-lg leading-relaxed">Recognized for innovation in AI-powered climate-smart agriculture. This funding accelerates our mission to reach every smallholder farmer.</p>
+                                                <h4 className="font-bold text-xl md:text-2xl text-white mb-3">UNDP Grant Awarded</h4>
+                                                <p className="text-gray-400 text-lg leading-relaxed">Recognized for innovation in AI-powered climate-smart agriculture. This funding accelerates our mission to deliver real-time disease diagnostic tools to smallholder farmers.</p>
                                             </div>
                                         </div>
                                         {/* Decorative element */}
