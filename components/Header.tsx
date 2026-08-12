@@ -66,15 +66,21 @@ const Header: React.FC<HeaderProps> = ({ navigate }) => {
                     {/* Center: Nav links */}
                     <nav className="hidden lg:flex items-center justify-center space-x-10 px-4">
                         {navLinks.map((link) => (
-                             <a 
-                                key={`desktop-${link.name}`} 
-                                href={link.hash || '#'} 
-                                onClick={(e) => { e.preventDefault(); handleNavClick(link.page, link.hash); }} 
+                             <a
+                                key={`desktop-${link.name}`}
+                                href={link.hash || '#'}
+                                onClick={(e) => { e.preventDefault(); handleNavClick(link.page, link.hash); }}
                                 className={`transition duration-300 font-bold text-xs uppercase tracking-widest whitespace-nowrap ${activeSection === link.hash ? 'text-brand-green-500' : 'text-gray-500 hover:text-brand-green-400'}`}
                             >
                                 {link.name}
                             </a>
                         ))}
+                        <a
+                            href="/agents/"
+                            className="border-2 border-brand-green-500 text-brand-green-600 hover:bg-brand-green-500 hover:text-white font-bold text-xs uppercase tracking-widest whitespace-nowrap py-1.5 px-5 rounded-full transition duration-300"
+                        >
+                            CropIQ Agents
+                        </a>
                     </nav>
 
                     {/* Right: CTA / Mobile Menu */}
@@ -108,6 +114,9 @@ const Header: React.FC<HeaderProps> = ({ navigate }) => {
                                      {link.name}
                                  </a>
                             ))}
+                            <a href="/agents/" className="border-2 border-brand-green-500 text-brand-green-600 font-bold uppercase tracking-widest text-xs py-3 px-4 rounded-full transition duration-300 text-center mt-2">
+                                CropIQ Agents
+                            </a>
                             <a href="#contact" onClick={(e) => { e.preventDefault(); handleNavClick('home', '#contact'); }} className="bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300 text-center mt-2">
                                 Contact Us
                             </a>
