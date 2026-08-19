@@ -5,7 +5,6 @@ import FeatureCard from './components/FeatureCard';
 import { LeafIcon, MicroscopeIcon, GlobeIcon, UsersIcon, ShieldCheckIcon, CheckCircleIcon, BellIcon, ChartIcon, PartnershipIcon } from './components/Icons';
 import GreenQuestLogo from './components/GreenQuestLogo';
 import StatItem from './components/StatItem';
-import InteractiveDemo from './components/InteractiveDemo';
 import SupplyChainAgents from './components/SupplyChainAgents';
 import { Camera, Sparkles, Truck, Store, ArrowRight, Activity, DollarSign } from 'lucide-react';
 
@@ -32,53 +31,53 @@ const App: React.FC = () => {
             <main>
                 <>
                     {/* Hero Section */}
-                    <section className="relative bg-[#081810] text-white pt-32 pb-36 lg:pt-48 lg:pb-52 overflow-hidden">
+                    <section className="relative bg-[#0d1f16] text-white pt-32 pb-36 lg:pt-48 lg:pb-52 overflow-hidden">
                         <div className="absolute inset-0">
-                            <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?q=80&w=2670&auto=format&fit=crop" alt="Lush green crops in a Nigerian field" className="w-full h-full object-cover opacity-25"/>
-                            <div className="absolute inset-0 bg-gradient-to-b from-[#081810]/70 via-[#081810]/85 to-[#081810]"></div>
+                            <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?q=80&w=2670&auto=format&fit=crop" alt="Lush green crops in a Nigerian field" className="w-full h-full object-cover opacity-20"/>
+                            <div className="absolute inset-0 bg-gradient-to-b from-[#0d1f16]/80 via-[#0d1f16]/90 to-[#0d1f16]"></div>
                         </div>
                         
                         <div className="container mx-auto px-6 relative z-10 text-center">
-                            <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 bg-brand-green-500/15 rounded-full border border-brand-green-500/30 backdrop-blur-sm">
-                                <span className="w-2 h-2 rounded-full bg-brand-green-400 animate-pulse"></span>
-                                <span className="text-brand-green-400 font-bold tracking-wider text-xs uppercase">Plant Vision & Supply Chain AI Agents</span>
+                            <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 bg-white/10 rounded-full border border-white/15">
+                                <span className="w-2 h-2 rounded-full bg-brand-green-500"></span>
+                                <span className="text-gray-200 font-semibold tracking-wider text-xs uppercase">Plant Vision & Supply Chain AI Agents</span>
                             </div>
                             
-                            <h1 className="text-4xl md:text-7xl font-extrabold leading-tight mb-6 max-w-5xl mx-auto [text-shadow:_0_2px_12px_rgb(0_0_0_/_40%)]">
+                            <h1 className="text-4xl md:text-7xl font-extrabold leading-tight mb-6 max-w-5xl mx-auto text-white">
                                 Detect in the Field. <br className="hidden sm:inline" />
                                 <span className="text-brand-green-500">Deliver Farm-to-Door.</span>
                             </h1>
                             
-                            <p className="text-lg md:text-2xl text-gray-200 max-w-3xl mx-auto mb-10 leading-relaxed font-medium">
+                            <p className="text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
                                 CropIQ goes beyond instant plant disease detection — our autonomous network of <strong>5 cooperating AI agents</strong> validates, prices, matches, and delivers Nigeria's produce supply chain with zero middleman friction.
                             </p>
                             
                             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-14">
-                                <a href="#ai-agents" className="bg-brand-green-500 hover:bg-brand-green-600 text-white font-bold py-4 px-10 rounded-full text-lg transition duration-300 shadow-lg shadow-brand-green-500/30 transform hover:scale-105 inline-flex items-center justify-center gap-2">
+                                <a href="#ai-agents" className="bg-brand-green-500 hover:bg-brand-green-600 text-white font-bold py-4 px-10 rounded-full text-lg transition duration-200 shadow-md inline-flex items-center justify-center gap-2">
                                     <span>Explore Supply Chain Agents</span>
                                     <Sparkles className="w-5 h-5" />
                                 </a>
-                                <a href="#demo" className="bg-white/10 hover:bg-white/20 text-white border border-white/30 font-bold py-4 px-10 rounded-full text-lg transition duration-300 backdrop-blur-sm inline-flex items-center justify-center gap-2">
-                                    <Activity className="w-5 h-5 text-brand-green-400" />
-                                    <span>Test Disease Detection</span>
+                                <a href="#how-it-works" className="bg-white/10 hover:bg-white/15 text-white border border-white/20 font-bold py-4 px-10 rounded-full text-lg transition duration-200 inline-flex items-center justify-center gap-2">
+                                    <span>How It Works</span>
+                                    <ArrowRight className="w-5 h-5 text-gray-300" />
                                 </a>
                             </div>
 
                             {/* Core Performance Metric Badges */}
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-6 border-t border-white/10 text-left">
-                                <div className="p-4 bg-white/5 rounded-2xl border border-white/5">
+                                <div className="p-4 bg-white/5 rounded-2xl border border-white/10">
                                     <div className="text-2xl lg:text-3xl font-extrabold text-brand-green-400">&lt; 2 hrs</div>
                                     <div className="text-xs text-gray-300 font-medium">Harvest to Buyer Match</div>
                                 </div>
-                                <div className="p-4 bg-white/5 rounded-2xl border border-white/5">
+                                <div className="p-4 bg-white/5 rounded-2xl border border-white/10">
                                     <div className="text-2xl lg:text-3xl font-extrabold text-brand-green-400">98%+</div>
                                     <div className="text-xs text-gray-300 font-medium">Verified Audit Trail</div>
                                 </div>
-                                <div className="p-4 bg-white/5 rounded-2xl border border-white/5">
+                                <div className="p-4 bg-white/5 rounded-2xl border border-white/10">
                                     <div className="text-2xl lg:text-3xl font-extrabold text-brand-green-400">&lt; 5%</div>
                                     <div className="text-xs text-gray-300 font-medium">Supply Spoilage Rate</div>
                                 </div>
-                                <div className="p-4 bg-white/5 rounded-2xl border border-white/5">
+                                <div className="p-4 bg-white/5 rounded-2xl border border-white/10">
                                     <div className="text-2xl lg:text-3xl font-extrabold text-brand-green-400">95%+</div>
                                     <div className="text-xs text-gray-300 font-medium">Pathogen Diagnostic Accuracy</div>
                                 </div>
@@ -205,9 +204,6 @@ const App: React.FC = () => {
                         </div>
                     </section>
 
-                    {/* Plant Disease Detection Interactive Demo Section */}
-                    <InteractiveDemo />
-
                     {/* Competitive Advantage */}
                     <section id="features" className="py-24 bg-white overflow-hidden">
                         <div className="container mx-auto px-6">
@@ -275,7 +271,7 @@ const App: React.FC = () => {
                     </section>
 
                     {/* Traction & Partnerships Section */}
-                    <section id="traction" className="py-24 bg-[#1a202c] text-white overflow-hidden">
+                    <section id="traction" className="py-24 bg-[#1a202c] text-white">
                         <div className="container mx-auto px-6">
                             <div className="text-center mb-16">
                                 <h2 className="text-3xl md:text-5xl font-bold mb-4">Traction & Partnerships</h2>
@@ -286,52 +282,47 @@ const App: React.FC = () => {
                                 {/* Left Column: Highlight and Operations */}
                                 <div className="lg:col-span-2 grid gap-6">
                                     {/* Highlight Card: UNDP Grant */}
-                                    <div className="group relative overflow-hidden bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-8 md:p-10 transition-all duration-500 hover:bg-white/10 hover:border-brand-green-500/30">
-                                        <div className="relative z-10 flex flex-col sm:flex-row items-start gap-6">
-                                            <div className="flex-shrink-0 bg-brand-green-500 p-4 rounded-2xl shadow-[0_0_20px_rgba(141,198,63,0.4)]">
-                                                <ShieldCheckIcon className="w-8 h-8 text-brand-charcoal" />
+                                    <div className="bg-white/5 rounded-3xl border border-white/10 p-8 md:p-10 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
+                                        <div className="flex flex-col sm:flex-row items-start gap-6">
+                                            <div className="flex-shrink-0 bg-brand-green-500 p-4 rounded-2xl">
+                                                <ShieldCheckIcon className="w-8 h-8 text-white" />
                                             </div>
                                             <div>
                                                 <h4 className="font-bold text-xl md:text-2xl text-white mb-3">UNDP Grant Awarded</h4>
-                                                <p className="text-gray-400 text-lg leading-relaxed">Recognized for innovation in AI-powered climate-smart agriculture. This funding accelerates our mission to deliver real-time disease diagnostic tools and AI supply chain agents to smallholder farmers.</p>
+                                                <p className="text-gray-300 text-base leading-relaxed">Recognized for innovation in AI-powered climate-smart agriculture. This funding accelerates our mission to deliver real-time disease diagnostic tools and AI supply chain agents to smallholder farmers.</p>
                                             </div>
                                         </div>
-                                        {/* Decorative element */}
-                                        <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-green-500/10 rounded-full blur-3xl group-hover:bg-brand-green-500/20 transition-all duration-500"></div>
                                     </div>
 
                                     {/* Operation Card: Pilot Testing */}
-                                    <div className="group relative overflow-hidden bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-8 md:p-10 transition-all duration-500 hover:bg-white/10 hover:border-brand-green-500/30">
-                                        <div className="relative z-10 flex items-start gap-6">
-                                            <div className="flex-shrink-0 bg-brand-green-500 p-4 rounded-2xl shadow-[0_0_20px_rgba(141,198,63,0.4)]">
-                                                <UsersIcon className="w-8 h-8 text-brand-charcoal" />
+                                    <div className="bg-white/5 rounded-3xl border border-white/10 p-8 md:p-10 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
+                                        <div className="flex items-start gap-6">
+                                            <div className="flex-shrink-0 bg-brand-green-500 p-4 rounded-2xl">
+                                                <UsersIcon className="w-8 h-8 text-white" />
                                             </div>
                                             <div>
                                                 <h4 className="font-bold text-xl md:text-2xl text-white mb-3">Pilot Testing Ongoing</h4>
-                                                <p className="text-gray-400 text-lg leading-relaxed">Field validation with smallholder farmers in Ogun, Oyo, and Kaduna States. Direct feedback cycles are refining our computer vision models and supply chain matching logic for real African conditions.</p>
+                                                <p className="text-gray-300 text-base leading-relaxed">Field validation with smallholder farmers in Ogun, Oyo, and Kaduna States. Direct feedback cycles are refining our computer vision models and supply chain matching logic for real African conditions.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 {/* Right Column: Partners (Full Height) */}
-                                <div className="lg:col-span-1 bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-8 md:p-10 flex flex-col items-center justify-center text-center relative overflow-hidden group transition-all duration-500 hover:bg-white/10 hover:border-brand-green-500/30">
-                                    <h4 className="text-sm font-bold mb-10 text-gray-400 uppercase tracking-[0.2em] relative z-10">Key Backers & Partners</h4>
+                                <div className="lg:col-span-1 bg-white/5 rounded-3xl border border-white/10 p-8 md:p-10 flex flex-col items-center justify-center text-center">
+                                    <h4 className="text-sm font-bold mb-8 text-gray-400 uppercase tracking-widest">Key Backers & Partners</h4>
                                     
-                                    <div className="space-y-6 w-full relative z-10">
-                                        <div className="group/chip bg-white/5 border border-white/10 p-6 rounded-2xl transition-all duration-300 hover:bg-white/10 hover:scale-[1.02] cursor-default">
+                                    <div className="space-y-4 w-full">
+                                        <div className="bg-white/5 border border-white/10 p-5 rounded-2xl transition-all duration-200 hover:bg-white/10">
                                             <p className="font-bold text-lg text-white mb-1">UNDP & Italian Government</p>
-                                            <p className="text-xs text-brand-green-500 font-mono tracking-widest uppercase">Global Partner</p>
+                                            <p className="text-xs text-brand-green-400 font-medium tracking-wider uppercase">Global Partner</p>
                                         </div>
                                         
-                                        <div className="group/chip bg-white/5 border border-white/10 p-6 rounded-2xl transition-all duration-300 hover:bg-white/10 hover:scale-[1.02] cursor-default">
+                                        <div className="bg-white/5 border border-white/10 p-5 rounded-2xl transition-all duration-200 hover:bg-white/10">
                                             <p className="font-bold text-lg text-white mb-1">Youth4Climate</p>
-                                            <p className="text-xs text-brand-green-400 font-mono tracking-widest uppercase">Innovation Hub</p>
+                                            <p className="text-xs text-brand-green-400 font-medium tracking-wider uppercase">Innovation Hub</p>
                                         </div>
                                     </div>
-
-                                    {/* Background glow */}
-                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-green-500/5 rounded-full blur-[100px] pointer-events-none group-hover:bg-brand-green-500/10 transition-all duration-500"></div>
                                 </div>
                             </div>
                         </div>
@@ -339,7 +330,6 @@ const App: React.FC = () => {
 
                     {/* Mission Statement */}
                     <section id="our-mission" className="bg-[#091a13] py-24 relative overflow-hidden border-t border-white/10">
-                        <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-green-500 opacity-5 -skew-x-12 translate-x-1/2"></div>
                         <div className="container mx-auto px-6 text-center relative z-10">
                             <h2 className="text-white text-3xl md:text-5xl font-bold mb-10 italic">"Our mission is to make farming and food distribution in Africa smarter, more profitable, and zero-waste."</h2>
                             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -349,19 +339,19 @@ const App: React.FC = () => {
                     </section>
 
                     {/* Final CTA */}
-                    <section id="contact" className="py-32 bg-white relative">
+                    <section id="contact" className="py-24 bg-white relative">
                         <div className="container mx-auto px-6 max-w-4xl">
-                            <div className="bg-brand-green-500 rounded-[3rem] p-12 md:p-20 text-center text-white shadow-2xl shadow-brand-green-500/20">
+                            <div className="bg-brand-green-500 rounded-3xl p-12 md:p-16 text-center text-white shadow-lg">
                                 <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to transform agriculture?</h2>
-                                <p className="text-lg md:text-xl text-brand-green-50 mb-10">
+                                <p className="text-lg md:text-xl text-white/90 mb-10">
                                     Whether you're a farmer, supermarket buyer, logistics partner, or investor, join us in building Africa's next-generation autonomous agricultural backbone.
                                 </p>
                                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                                    <a href="https://cropiq.up.railway.app/dashboard" target="_blank" rel="noopener noreferrer" className="bg-white text-brand-green-700 hover:bg-brand-green-50 font-bold py-4 px-10 rounded-2xl text-lg transition duration-300 shadow-xl flex items-center justify-center">
-                                        Test Live App Dashboard
-                                    </a>
-                                    <a href="https://linktr.ee/cropiq" target="_blank" rel="noopener noreferrer" className="bg-brand-charcoal hover:bg-black text-white font-bold py-4 px-10 rounded-2xl text-lg transition duration-300 flex items-center justify-center">
+                                    <a href="https://linktr.ee/cropiq" target="_blank" rel="noopener noreferrer" className="bg-white text-brand-green-700 hover:bg-gray-50 font-bold py-4 px-10 rounded-2xl text-lg transition duration-200 shadow-sm flex items-center justify-center">
                                         Get in Touch
+                                    </a>
+                                    <a href="/agents/" className="bg-brand-charcoal hover:bg-black text-white font-bold py-4 px-10 rounded-2xl text-lg transition duration-200 flex items-center justify-center">
+                                        Explore CropIQ Agents
                                     </a>
                                 </div>
                             </div>

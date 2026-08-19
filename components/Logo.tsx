@@ -3,45 +3,70 @@ import React from 'react';
 interface LogoProps {
     className?: string;
     variant?: 'default' | 'on-dark';
+    size?: 'sm' | 'md' | 'lg' | 'xl';
 }
 
-const Logo: React.FC<LogoProps> = ({ className, variant = 'default' }) => {
-    const textColor = variant === 'on-dark' ? 'text-white' : 'text-[#41515A]';
-    // Using two shades of green from the brand palette for a more accurate logo
-    const darkLeafColor = '#699832'; // brand-green-700
-    const lightLeafColor = '#8DC63F'; // brand-green-500
+const Logo: React.FC<LogoProps> = ({ className = '', variant = 'default', size = 'md' }) => {
+    const textColor = variant === 'on-dark' ? 'text-white' : 'text-[#263B46]';
+    const leafColor = '#44D368';
+    const veinColor = variant === 'on-dark' ? '#081810' : '#ffffff';
+
+    const sizeClasses = {
+        sm: 'text-xl',
+        md: 'text-2xl',
+        lg: 'text-3xl',
+        xl: 'text-4xl',
+    };
 
     return (
-        <div className={`font-bold text-2xl tracking-tight flex items-center ${textColor} ${className}`}>
-            <span className="flex items-center">
-                <span>cr</span>
-                <span className="relative inline-flex items-center justify-center">
-                    o
-                    <span className="absolute -top-4 left-1/2 -translate-x-1/2 w-[24px] h-[20px]">
+        <div className={`font-bold tracking-tight inline-flex items-center select-none font-sans ${sizeClasses[size]} ${textColor} ${className}`}>
+            <span className="inline-flex items-baseline">
+                <span className="tracking-tight font-semibold">cr</span>
+                <span className="relative inline-flex items-baseline justify-center">
+                    <span className="font-semibold">o</span>
+                    {/* Sprouting Twin Leaves Mark */}
+                    <span className="absolute -top-[1.1em] left-1/2 -translate-x-[48%] pointer-events-none w-[1.45em] h-[1.15em]">
                         <svg
-                            width="24"
-                            height="20"
-                            viewBox="0 0 24 20"
+                            viewBox="0 0 100 80"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
+                            className="w-full h-full overflow-visible"
                             aria-hidden="true"
                         >
+                            {/* Left Leaf */}
                             <path
-                                d="M11.8383 9.403C12.8336 7.0398 13.9142 4.4848 14.524 1.905C14.524 1.905 9.14399 0.5284 6.55169 3.424C4.69469 5.4984 4.85109 9.5312 6.01289 11.458C6.01289 11.458 10.3341 12.8346 11.8383 9.403Z"
-                                fill={darkLeafColor}
+                                d="M47 70 C44 52 30 38 4 35 C1 48 10 65 32 72 C38 74 43 73 47 70 Z"
+                                fill={leafColor}
                             />
+                            {/* Left Leaf Inner Vein */}
                             <path
-                                d="M12.1617 9.403C11.1664 7.0398 10.0858 4.4848 9.47601 1.905C9.47601 1.905 14.856 0.5284 17.4483 3.424C19.3053 5.4984 19.1489 9.5312 17.9871 11.458C17.9871 11.458 13.6659 12.8346 12.1617 9.403Z"
-                                fill={lightLeafColor}
+                                d="M44 68 C35 56 22 47 10 42"
+                                stroke={veinColor}
+                                strokeWidth="3"
+                                strokeLinecap="round"
+                            />
+
+                            {/* Right Leaf */}
+                            <path
+                                d="M52 70 C56 46 72 24 96 10 C99 26 94 48 70 65 C62 70 56 72 52 70 Z"
+                                fill={leafColor}
+                            />
+                            {/* Right Leaf Inner Vein */}
+                            <path
+                                d="M55 67 C66 52 78 36 89 22"
+                                stroke={veinColor}
+                                strokeWidth="3.5"
+                                strokeLinecap="round"
                             />
                         </svg>
                     </span>
                 </span>
-                <span>pIQ</span>
+                <span className="tracking-tight font-semibold">p</span>
+                <span className="tracking-tight font-bold ml-[1px]">IQ</span>
             </span>
         </div>
     );
 };
 
-
 export default Logo;
+

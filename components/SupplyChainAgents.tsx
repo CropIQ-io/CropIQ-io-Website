@@ -204,34 +204,29 @@ const SupplyChainAgents: React.FC = () => {
   };
 
   return (
-    <section id="ai-agents" className="py-28 bg-[#091a13] text-white relative overflow-hidden">
-      {/* Background Gradients */}
-      <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-brand-green-500/10 rounded-full blur-[140px] pointer-events-none"></div>
-      <div className="absolute bottom-0 right-10 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-[120px] pointer-events-none"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(#1f4a35_1px,transparent_1px)] [background-size:24px_24px] opacity-20 pointer-events-none"></div>
-
+    <section id="ai-agents" className="py-24 bg-[#0c1e15] text-white relative">
       <div className="container mx-auto px-6 relative z-10">
         
         {/* Section Header */}
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green-500/15 border border-brand-green-500/30 text-brand-green-400 font-bold text-xs uppercase tracking-widest mb-6">
-            <Cpu className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-gray-200 font-bold text-xs uppercase tracking-widest mb-6">
+            <Cpu className="w-4 h-4 text-brand-green-400" />
             <span>Autonomous Agricultural Supply Chain</span>
           </div>
 
           <h2 className="text-3xl md:text-6xl font-black tracking-tight mb-6 leading-tight text-white">
             Farm-to-door, <br className="hidden sm:inline" />
-            <span className="text-brand-green-500 underline decoration-brand-green-500/40 underline-offset-8">
+            <span className="text-brand-green-500">
               every step logged.
             </span>
           </h2>
 
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-normal">
             Nigeria's produce supply chain — validated, priced, matched, and delivered by <strong className="text-white">five cooperating AI agents</strong> working in real time.
           </p>
 
           {/* Key Metrics Row from Screenshot 1 */}
-          <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto mt-10 p-2 bg-white/5 rounded-3xl border border-white/10 backdrop-blur-md">
+          <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto mt-10 p-2 bg-white/5 rounded-3xl border border-white/10">
             <div className="py-4 px-3 text-center border-r border-white/10">
               <div className="text-2xl sm:text-4xl font-black text-brand-green-400">&lt; 2 hrs</div>
               <div className="text-xs text-gray-300 font-medium mt-1">harvest → match</div>
@@ -290,7 +285,7 @@ const SupplyChainAgents: React.FC = () => {
               <button 
                 onClick={simulateNewHarvest}
                 disabled={isSimulating}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-green-500 hover:bg-brand-green-600 disabled:opacity-50 text-white font-bold py-3.5 px-6 rounded-2xl transition duration-300 shadow-lg shadow-brand-green-500/20 active:scale-95 cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-green-500 hover:bg-brand-green-600 disabled:opacity-50 text-white font-bold py-3.5 px-6 rounded-2xl transition duration-200 shadow-md active:scale-95 cursor-pointer"
               >
                 <RefreshCw className={`w-4 h-4 ${isSimulating ? 'animate-spin' : ''}`} />
                 <span>{isSimulating ? 'Agents Cooperating...' : 'Trigger Harvest Simulation'}</span>
@@ -351,8 +346,8 @@ const SupplyChainAgents: React.FC = () => {
                       <div>
                         <div className="flex items-center gap-2">
                           <h4 className="font-serif font-bold text-lg text-white">Agent Console</h4>
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-brand-green-500/20 text-brand-green-400 text-[10px] font-bold">
-                            <span className="w-1.5 h-1.5 rounded-full bg-brand-green-400 animate-pulse"></span>
+                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/10 text-gray-300 text-[10px] font-bold">
+                            <span className="w-1.5 h-1.5 rounded-full bg-brand-green-500"></span>
                             Live
                           </span>
                         </div>

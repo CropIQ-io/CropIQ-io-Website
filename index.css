@@ -3,18 +3,18 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
-  --color-brand-green-50: #f6faef;
-  --color-brand-green-100: #eef6df;
-  --color-brand-green-200: #dceccd;
-  --color-brand-green-300: #cae3bb;
-  --color-brand-green-400: #b7d9a8;
-  --color-brand-green-500: #8DC63F;
-  --color-brand-green-600: #7baf39;
-  --color-brand-green-700: #699832;
-  --color-brand-green-800: #57812c;
-  --color-brand-green-900: #456a25;
-  --color-brand-green-950: #2c4418;
-  --color-brand-charcoal: #41515A;
+  --color-brand-green-50: #f2fcf5;
+  --color-brand-green-100: #e0f8e9;
+  --color-brand-green-200: #c1f2d3;
+  --color-brand-green-300: #8ee7b0;
+  --color-brand-green-400: #58d888;
+  --color-brand-green-500: #44D368;
+  --color-brand-green-600: #33be55;
+  --color-brand-green-700: #2a9645;
+  --color-brand-green-800: #26763a;
+  --color-brand-green-900: #216132;
+  --color-brand-green-950: #0c3619;
+  --color-brand-charcoal: #263B46;
 
   @keyframes fade-in-down {
     0% {
