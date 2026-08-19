@@ -21,8 +21,9 @@ const Header: React.FC<HeaderProps> = ({ navigate }) => {
 
     const navLinks = [
         { name: 'The Problem', page: 'home', hash: '#the-problem' },
+        { name: 'AI Agents', page: 'home', hash: '#ai-agents' },
+        { name: 'Disease Detection', page: 'home', hash: '#demo' },
         { name: 'How It Works', page: 'home', hash: '#how-it-works' },
-        { name: 'Try Demo', page: 'home', hash: '#demo' },
         { name: 'Traction', page: 'home', hash: '#traction' },
     ];
 
